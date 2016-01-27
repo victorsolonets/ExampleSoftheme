@@ -31,8 +31,9 @@
                 [text appendFormat:@"%@ - Artist \n", artist.name];
                 [text appendString:@"List of songs: "];
                 for(SVMSong* song in artist.listOfSong){
-                    [text appendFormat:@"\"%@\" ", song.name];
+                    [text appendFormat:@"\"%@\",", song.name];
                 }
+                [text deleteCharactersInRange:NSMakeRange([text length] - 1, 1)];
                 [text appendString:@"\n"];
             }
             return text;
@@ -42,12 +43,14 @@
             for(SVMGroup* group in self){
                 [text appendFormat:@"%@ - Group \nList of Artists (", group.name];
                 for(SVMArtist* artist in group.listOfArtis){
-                    [text appendFormat:@"%@, ", artist.name];
+                    [text appendFormat:@"%@,", artist.name];
                 }
+                [text deleteCharactersInRange:NSMakeRange([text length] - 1, 1)];
                 [text appendString:@") \nList of songs ("];
                 for(SVMSong* song in group.listOfSong){
-                    [text appendFormat:@"\"%@\" ", song.name];
+                    [text appendFormat:@"\"%@\",", song.name];
                 }
+                [text deleteCharactersInRange:NSMakeRange([text length] - 1, 1)];
                 [text appendString:@") \n"];
                 
             }
