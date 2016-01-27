@@ -22,6 +22,7 @@
 @property NSString *text;
 @property NSString *artist;
 
+- (instancetype) initWithSongName : (NSString*) newName newArtist : (NSString*) newArtist andText : (NSString*) newText;
 - (void) play;
 
 @end

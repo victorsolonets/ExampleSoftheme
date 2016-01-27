@@ -11,5 +11,6 @@
 @interface SVMGroup : SVMArtist
 
 @property NSArray *listOfArtis;
+- (instancetype) initWithName : (NSString*) newName andListOfSong : (NSArray*) newListSong andArtists : (NSArray*) newListArtists;
 
 @end

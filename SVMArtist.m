@@ -10,6 +10,15 @@
 
 @implementation SVMArtist
 
-
+- (instancetype) initWithName : (NSString*) newName andListOfSong : (NSArray*) newList {
+    self = [super init];
+    if (!self) {
+        return nil;
+    } else {
+        [self setName:newName];
+        [self setListOfSong:newList];
+        return self;
+    }
+}
 
 @end

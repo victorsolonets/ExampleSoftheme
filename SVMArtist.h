@@ -13,4 +13,6 @@
 @property NSString *name;
 @property NSArray *listOfSong;
 
+- (instancetype) initWithName : (NSString*) newName andListOfSong : (NSArray*) newList;
+
 @end

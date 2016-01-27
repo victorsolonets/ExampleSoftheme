@@ -10,4 +10,15 @@
 
 @implementation SVMGroup
 
+- (instancetype) initWithName : (NSString*) newName andListOfSong : (NSArray*) newListSong andArtists : (NSArray*) newListArtists {
+    self = [super init];
+    if (!self) {
+        return nil;
+    } else {
+        [self setName:newName];
+        [self setListOfSong:newListSong];
+        [self setListOfArtis:newListArtists];
+        return self;
+    }
+}
 @end

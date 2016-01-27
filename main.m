@@ -15,23 +15,17 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         SVMArtist *artistOne = [SVMArtist new];
-        SVMSong *songOne = [SVMSong new];
-        songOne.name = @"Brutto";
-        songOne.artist = @"Mikhalok";
-        songOne.text = @"Brutto, Brutto,\nBrutto, Brutto";
-        SVMSong *songTwo = [SVMSong new];
-        songOne.name = @"Friends Like you";
-        songOne.artist = @"Joshua Radin";
-        songOne.text = @"Friens you like...\nCan't explain and other ...";
-        [artistOne setName : @"Mikhalok"];
+        SVMSong *songOne = [[SVMSong alloc] initWithSongName:@"Winter" newArtist:@"Joshua Radin" andText:@"I should know\nWho I am by now\nI walk\nThe record stands somehow\nThinking of winter"];
+        SVMSong *songTwo = [[SVMSong alloc] initWithSongName:@"Friends Like you" newArtist:@"Joshua Radin" andText:@"I like the way you're not afraid\nYou got the world planned in your mind\nPeople say you cannot do well\nhey don't know a friend like you"];
         [artistOne setListOfSong:@[songOne,songTwo]];
+        [artistOne setName:@"Joshua Radin"];
         NSLog(@"%@",[artistOne name]);
         SVMArtist *artistTwo = [SVMArtist new];
         [artistTwo setName:@"Brutto"];
         NSLog(@"%@",[artistTwo name]);
         NSArray *array = @[artistOne, artistTwo];
         NSLog(@"%@", [array printPretty]);
-        [songOne play];
+        [songTwo play];
     }
     return 0;
 }

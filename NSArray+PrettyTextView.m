@@ -15,11 +15,12 @@
     for(id item in self){
         if([item class] == [SVMArtist class]){
             for(SVMArtist* artist in self){
-                [text appendFormat:@"%@ - Artist \nList of songs: ", artist.name];
+                [text appendFormat:@"%@ - Artist \nList of songs: (", artist.name];
                 for(SVMSong* song in artist.listOfSong){
-                    [text appendFormat:@"\"%@\" ", song.name];
+                    [text appendFormat:@"\"%@\",", song.name];
                 }
-                [text appendString:@"\n"];
+                [text deleteCharactersInRange:NSMakeRange([text length] - 1, 1)];
+                [text appendString:@")\n"];
                 
             }
             return text;

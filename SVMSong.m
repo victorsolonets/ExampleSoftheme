@@ -10,8 +10,20 @@
 
 @implementation SVMSong
 
+- (instancetype) initWithSongName : (NSString*) newName newArtist : (NSString*) newArtist andText : (NSString*) newText {
+    self = [super init];
+    if (!self) {
+        return nil;
+    } else {
+        [self setName:newName];
+        [self setArtist:newArtist];
+        [self setText:newText];
+        return self;
+    }
+}
+
 - (void) play {
-    NSLog(@"The song is %@ : %@", _name, _text);
+    NSLog(@"\n%@ (%@)\n\n%@", _name, _artist,_text);
 }
 
 @end
