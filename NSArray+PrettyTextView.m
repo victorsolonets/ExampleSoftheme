@@ -7,6 +7,9 @@
 //
 
 #import "NSArray+PrettyTextView.h"
+#import "SVMArtist.h"
+#import "SVMGroup.h"
+#import "SVMSong.h"
 
 @implementation NSArray (PrettyTextView)
 

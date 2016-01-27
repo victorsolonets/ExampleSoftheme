@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SVMArtist.h"
-#import "SVMGroup.h"
-#import "SVMSong.h"
+
 
 @interface NSArray (PrettyTextView)
 

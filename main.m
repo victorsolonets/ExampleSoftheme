@@ -31,20 +31,18 @@ int main(int argc, const char * argv[]) {
         SVMSong *songKray = [[SVMSong alloc] initWithSongName:@"Родны Край" newArtist:@"Brutto" andText:@"Родны, родны, родны край\nЯ табе вораг - мяне не чакай,\nРодны, родны, родны брат\nБойся мяне - я злодзей ды кат\nРодная, родная, родная маці\n - ваўкалак, хавайся ў хаце,\nРодны, родны, родны бацька\nСын звар'яцеў - ня трэба чакаць яго"];
         
         SVMSong *songIGetWet = [[SVMSong alloc] initWithSongName:@"I get wet" newArtist:@"Brutto" andText:@"You watch what I say\n(Watch what I Say)\nWatch what I do\nBecause I really don't care."];
-        
+
         SVMArtist *artistThree = [[SVMArtist alloc] initWithName:@"Sergey Mikhalok" andListOfSong:@[songIGetWet, songKray]];
         SVMArtist *artistFour = [[SVMArtist alloc] initWithName:@"Vitaliy Gurkov" andListOfSong:@[songIGetWet, songKray]];
         SVMArtist *artistFive = [[SVMArtist alloc] initWithName:@"Serj Tankian" andListOfSong:@[songSugar, songKnow]];
         SVMArtist *artistSix = [[SVMArtist alloc] initWithName:@"Daron Malakian" andListOfSong:@[songSugar, songKnow]];
-        
-        
         
         SVMGroup *bruttoGroup = [[SVMGroup alloc] initWithName: @"Brutto" andListOfSong:@[songKray,songIGetWet] andArtists:@[artistFour, artistThree]];
         
         SVMGroup *soadGroup = [[SVMGroup alloc] initWithName:@"SOAD" andListOfSong:@[songKnow, songSugar] andArtists:@[artistSix, artistFive]];
         
         NSArray *groups = @[soadGroup, bruttoGroup];
-        NSLog([groups printPretty]);
+        NSLog(@"%@",[groups printPretty]);
     }
     return 0;
 }

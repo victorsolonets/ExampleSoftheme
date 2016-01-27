@@ -10,7 +10,7 @@
 #import "SVMArtist.h"
 @interface SVMGroup : SVMArtist
 
-@property NSArray *listOfArtis;
+@property (nonatomic) NSArray *listOfArtis;
 - (instancetype) initWithName : (NSString*) newName andListOfSong : (NSArray*) newListSong andArtists : (NSArray*) newListArtists;
 
 @end

@@ -10,8 +10,8 @@
 
 @interface SVMArtist : NSObject
 
-@property NSString *name;
-@property NSArray *listOfSong;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSArray *listOfSong;
 
 - (instancetype) initWithName : (NSString*) newName andListOfSong : (NSArray*) newList;
 

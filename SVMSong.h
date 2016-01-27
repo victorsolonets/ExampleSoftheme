@@ -7,22 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-@class SVMSong;
 
-@protocol SongProtocol <NSObject>
+@protocol SVMSongProtocoling <NSObject>
 
 @required
 - (void) play;
 
 @end
 
-@interface SVMSong : NSObject <SongProtocol>
+@interface SVMSong : NSObject <SVMSongProtocoling>
 
-@property NSString *name;
-@property NSString *text;
-@property NSString *artist;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *text;
+@property (nonatomic) NSString *artist;
 
 - (instancetype) initWithSongName : (NSString*) newName newArtist : (NSString*) newArtist andText : (NSString*) newText;
-- (void) play;
-
 @end
